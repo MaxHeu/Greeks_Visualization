@@ -30,11 +30,14 @@ your_project/
 ├── external/
 │   ├── matplotplusplus/    # cloned repo (Matplot++)
 │   └── imgui/              # cloned repo (ImGui)
-├── src/                    # source files
-├── include/                # header files
 ├── CMakeLists.txt
 ├── main.cpp
-└── README.md
+├── Greeks.cpp
+├── Greeks.hpp
+├── data.cpp
+├── data.hpp
+├── func.cpp
+└── func.hpp
 ```
 3. **Clone required dependencies inside the external/ folder:**
 ```
