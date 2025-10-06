@@ -90,7 +90,7 @@ Plots=3D
 ## 📊 Example Visualizations
 | Visualization              | Description                                                     |
 | :------------------------- | :-------------------------------------------------------------- |
-| ![Simple](Simple.png)      | Illustration of 2D plot for some greeks (Stock Price vs Greek)  |
+| ![Simple](Simple.png)      | Illustration of 2D plot for some greeks (Stock Price vs Greek). Call is always in blue, Put always in red. The lighter the line, the smaller the time to maturity  |
 | ![3D](3D.png)              | Gamma heatmap across different strikes and maturities           |
 | ![Moneyness](Moneyness.png)| ITM (5%) and OTM (5%) for Call Delta and Gamma                  |
 
