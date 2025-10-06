@@ -1,0 +1,12 @@
+InitialStock=90.00
+MaxMaturity=2.00
+Strike=100.00
+Vol=0.20
+RiskFreeRate=0.05
+Yield=0.00
+ITM=5.00
+OTM=5.00
+Greeks=Delta,Gamma,Rho,Theta,Vega
+Options=Call,Put
+Plots=Moneyness
+NumberOfMaturities=30.00
