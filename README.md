@@ -31,6 +31,7 @@ your_project/
 │   ├── matplotplusplus/    # cloned repo (Matplot++)
 │   └── imgui/              # cloned repo (ImGui)
 ├── CMakeLists.txt
+├── param.txt
 ├── main.cpp
 ├── Greeks.cpp
 ├── Greeks.hpp
