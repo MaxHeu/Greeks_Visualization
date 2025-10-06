@@ -49,9 +49,10 @@ cd ..
 ```
 4. **Build the project as you usually do:**
 ```
-   mkdir build && cd build
+mkdir build && cd build
 cmake ..
-make
+cmake --build .
+./my_program
 ```
 5. **Run the executable and enjoy the visualizations!**
 
