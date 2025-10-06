@@ -406,8 +406,8 @@ void PlotMoneyness(double &ITM, double &OTM, double &K, double &S0, double &r, d
             // Extract Greek values
             std::vector<double> GreekITM(Y.size()), GreekOTM(Y.size()), GreekATM(Y.size());
             for (size_t j = 0; j < Y.size(); ++j) {
-                GreekITM[j] = GreekValues[g][o][idxITM][j];
-                GreekOTM[j] = GreekValues[g][o][idxOTM][j];
+                GreekITM[j] = GreekValues[g][o][X.size() - idxITM][j];
+                GreekOTM[j] = GreekValues[g][o][X.size() - idxOTM][j];
                 GreekATM[j] = GreekValues[g][o][idxATM][j];
             }
 
