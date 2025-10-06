@@ -108,3 +108,6 @@ CMake ≥ 3.15
 🧑‍💻 Author
 
 Developed by _Maxime Heuse_ as a practical tool for option analysis and visualization under the Black–Scholes model.
+
+## Bugs 
+1. When modifying "numMaturities" via slider, a segfault occurs...
