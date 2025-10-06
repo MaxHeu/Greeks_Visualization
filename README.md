@@ -25,26 +25,27 @@ To make the project work locally, follow these steps:
    git clone https://github.com/MaxHeu/Greeks_Visualization.git
    cd Greeks_Visualization
 2. **Create a folder structure like this:**
-your_project/  //
-├── external/ //
-│   ├── matplotplusplus/    # cloned repo (Matplot++) //
-│   └── imgui/              # cloned repo (ImGui) //
-├── src/                    # source files //
-├── include/                # header files //
-├── CMakeLists.txt //
-├── main.cpp //
-└── README.md //
-
-4. **Clone required dependencies inside the external/ folder:**
+'''
+your_project/
+├── external/
+│   ├── matplotplusplus/    # cloned repo (Matplot++)
+│   └── imgui/              # cloned repo (ImGui)
+├── src/                    # source files
+├── include/                # header files
+├── CMakeLists.txt
+├── main.cpp
+└── README.md
+'''
+3. **Clone required dependencies inside the external/ folder:**
 cd external
 git clone https://github.com/alandefreitas/matplotplusplus.git
 git clone https://github.com/ocornut/imgui.git
 cd ..
-5. **Build the project as you usually do:**
+4. **Build the project as you usually do:**
    mkdir build && cd build
 cmake ..
 make
-6. **Run the executable and enjoy the visualizations!**
+5. **Run the executable and enjoy the visualizations!**
 
 ## ⚙️ Parameters
 The API supports the following Black–Scholes input parameters into sliders. You can configure these parameters directly in the code or via a graphical interface (if enabled).
