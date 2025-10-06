@@ -77,19 +77,23 @@ In file _param.txt_, user can modify last three parameters (parameters are case 
 |   Plots=   | Different visualization      |  Simple or 3D or Moneyness  |
 
 _Example of usage_ : 
+```
 Greeks=Delta,Gamma
 Options=Call,Put
 Plots=Simple
-
+```
+```
 Greeks=Delta,Gamma,Vega
 Options=Call
 Plots=3D
-
+```
 ## 📊 Example Visualizations
 | Visualization              | Description                                                     |
 | :------------------------- | :-------------------------------------------------------------- |
-| ![Delta Surface](fig1.png) | Delta variation with respect to underlying price and volatility |
-| ![Gamma Surface](fig2.png) | Gamma heatmap across different strikes and maturities           |
+| ![Simple](simple.png)      | Illustration of 2D plot for some greeks (Stock Price vs Greek)  |
+| ![3D](3d.png)              | Gamma heatmap across different strikes and maturities           |
+| ![Moneyness](moneyness.png)| ITM (5%) and OTM (5%) for Call Delta and Gamma                  |
+
 
 ## 🧰 Dependencies
 
