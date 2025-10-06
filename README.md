@@ -99,11 +99,11 @@ Plots=3D
 
 C++17 or newer
 
-Matplot++
+Matplot++ (requires GNU plot)
 
 ImGui
 
-CMake ≥ 3.10
+CMake ≥ 3.15
 
 🧑‍💻 Author
 
