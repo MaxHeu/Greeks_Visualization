@@ -90,9 +90,9 @@ Plots=3D
 ## 📊 Example Visualizations
 | Visualization              | Description                                                     |
 | :------------------------- | :-------------------------------------------------------------- |
-| ![Simple](../simple.png)      | Illustration of 2D plot for some greeks (Stock Price vs Greek)  |
-| ![3D](../3d.png)              | Gamma heatmap across different strikes and maturities           |
-| ![Moneyness](../moneyness.png)| ITM (5%) and OTM (5%) for Call Delta and Gamma                  |
+| ![Simple](Simple.png)      | Illustration of 2D plot for some greeks (Stock Price vs Greek)  |
+| ![3D](3D.png)              | Gamma heatmap across different strikes and maturities           |
+| ![Moneyness](Moneyness.png)| ITM (5%) and OTM (5%) for Call Delta and Gamma                  |
 
 
 ## 🧰 Dependencies
