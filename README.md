@@ -25,7 +25,7 @@ To make the project work locally, follow these steps:
    git clone https://github.com/MaxHeu/Greeks_Visualization.git
    cd Greeks_Visualization
 2. **Create a folder structure like this:**
-'''
+```
 your_project/
 ├── external/
 │   ├── matplotplusplus/    # cloned repo (Matplot++)
@@ -35,16 +35,20 @@ your_project/
 ├── CMakeLists.txt
 ├── main.cpp
 └── README.md
-'''
+```
 3. **Clone required dependencies inside the external/ folder:**
+```
 cd external
 git clone https://github.com/alandefreitas/matplotplusplus.git
 git clone https://github.com/ocornut/imgui.git
 cd ..
+```
 4. **Build the project as you usually do:**
+```
    mkdir build && cd build
 cmake ..
 make
+```
 5. **Run the executable and enjoy the visualizations!**
 
 ## ⚙️ Parameters
