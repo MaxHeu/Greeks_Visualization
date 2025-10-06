@@ -22,10 +22,18 @@ To make the project work locally, follow these steps:
 
 1. **Clone this repository**  
    ```bash
-   git clone https://github.com/yourusername/black-scholes-greeks-visualizer.git
-   cd black-scholes-greeks-visualizer
+   git clone https://github.com/MaxHeu/Greeks_Visualization.git
+   cd Greeks_Visualization
 2. **Create a folder structure like this:**
-<pre><code>your_project/ ├── external/ │ ├── matplotplusplus/ # cloned repo (Matplot++) │ └── imgui/ # cloned repo (ImGui) ├── src/ # source files ├── include/ # header files ├── CMakeLists.txt ├── main.cpp └── README.md </code></pre>
+your_project/  //
+├── external/ //
+│   ├── matplotplusplus/    # cloned repo (Matplot++) //
+│   └── imgui/              # cloned repo (ImGui) //
+├── src/                    # source files //
+├── include/                # header files //
+├── CMakeLists.txt //
+├── main.cpp //
+└── README.md //
 
 4. **Clone required dependencies inside the external/ folder:**
 cd external
