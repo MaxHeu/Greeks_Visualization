@@ -415,7 +415,7 @@ void PlotMoneyness(double &ITM, double &OTM, double &K, double &S0, double &r, d
             std::vector<std::string> legends;
             legends.reserve(3);
             auto l1 = ax->plot(Y, GreekITM);
-            std::string name1 = "ITM (" + std::to_string((int)ITM) + "%)-" + std::string(isCall ? " Call" : " Put");
+            std::string name1 = "ITM (" + std::to_string((int)ITM) + "%)-" + std::string(!isCall ? " Call" : " Put");
             l1->line_width(2); l1->color(base); l1->display_name(name1  );
             legends.push_back(name1);
             //l1->legend_string("ITM (" + std::to_string((int)ITM) + "%)-" + std::string(isCall ? " Call" : " Put"));
