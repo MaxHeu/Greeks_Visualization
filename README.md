@@ -111,4 +111,3 @@ Developed by _Maxime Heuse_ as a practical tool for option analysis and visualiz
 
 ## Bugs 
 1. When modifying "numMaturities" via slider, a segfault occurs...
-2. Do not compute correct results when only "Call" is required in param.txt
