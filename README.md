@@ -1,6 +1,6 @@
-# 📈 Black–Scholes Greeks Visualizer API (C++)
+# 📈 Black–Scholes Greeks Visualizer Tool (C++)
 
-This project provides a **C++ API** for computing and visualizing various **option Greeks** under the **Black–Scholes framework** for both **call and put options**.  
+This project provides a **C++ Tool** for computing and visualizing various **option Greeks** under the **Black–Scholes framework** for both **call and put options**.  
 
 It leverages modern C++ features and visualization libraries like [Matplot++](https://github.com/alandefreitas/matplotplusplus) and [ImGui](https://github.com/ocornut/imgui) to produce interactive or static visualizations of option sensitivities.
 
@@ -12,7 +12,6 @@ It leverages modern C++ features and visualization libraries like [Matplot++](ht
 - Handle both **Call** and **Put** options  
 - Visualize Greeks with **Matplot++**  
 - Interactive exploration via **ImGui**  
-- Modular API design for easy integration into other projects  
 
 ---
 
@@ -57,7 +56,7 @@ cmake --build .
 5. **Run the executable and enjoy the visualizations!**
 
 ## ⚙️ Parameters
-The API supports the following Black–Scholes input parameters into sliders. You can configure these parameters directly in the code or via a graphical interface (if enabled).
+The Tool supports the following Black–Scholes input parameters into sliders. You can configure these parameters directly in the code or via a graphical interface (if enabled).
 |   Symbol   | Description                  | Example Value |  Range |
 | :--------: | ---------------------------- | :-----------: | :----: |
 |   ( S_0 )  | Initial stock price          |     100.0     |  0-999 |
