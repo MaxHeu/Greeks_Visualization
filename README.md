@@ -112,3 +112,4 @@ Developed by _Maxime Heuse_ as a practical tool for option analysis and visualiz
 
 ## Bugs 
 1. When modifying "numMaturities" via slider, a segfault occurs...
+2. Code give wrong axis names for theta and rho..
