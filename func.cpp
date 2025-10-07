@@ -16,10 +16,15 @@ T clamp(T v, T lo, T hi) {
     return (v < lo) ? lo : (v > hi ? hi : v);
 }
 
+// Helper : find a string i
+bool find(const std::string& target, const std::string& source) {
+    return source.find(target) != std::string::npos;
+}
 
 
 // Helper: split comma-separated string
 std::vector<std::string> split(const std::string &s, char delimiter = ',') {
+    if (s.find(',') != std::string::npos) { 
     std::vector<std::string> tokens;
     std::stringstream ss(s);
     std::string item;
@@ -27,6 +32,9 @@ std::vector<std::string> split(const std::string &s, char delimiter = ',') {
         if (!item.empty()) tokens.push_back(item);
     }
     return tokens;
+    } else {
+        return {s}; // return the whole string as a single element vector
+    }
 }
 
 
@@ -140,7 +148,8 @@ void Plot2D(double &ITM, double &OTM, double &K, double &S0, double &r, double &
         auto ax = f->add_subplot(rows, cols, g + 1);
 
         for (size_t o = 0; o < oCount; o++) {
-            bool isCall = (options[o] == "Call" || options[o] == "call");
+            std::string call = "Call";
+            bool isCall = (find(call, options[o]));
             std::array<float, 3> base = isCall ? std::array<float, 3>{0.f, 0.f, 1.f}  // blue
                                                : std::array<float, 3>{1.f, 0.f, 0.f}; // red
 
@@ -266,7 +275,8 @@ void Plot3D(double &ITM, double &OTM, double &K, double &S0, double &r, double &
         ax->hold(on);
 
         for (size_t o = 0; o < oCount; o++) {
-            bool isCall = (options[o] == "Call" || options[o] == "call");
+            std::string call = "Call";
+            bool isCall = (find(call, options[o]));
             std::array<float,3> base = isCall ? std::array<float,3>{0.f,0.f,1.f}  // blue
                                               : std::array<float,3>{1.f,0.f,0.f}; // red
 
@@ -361,6 +371,8 @@ void PlotMoneyness(double &ITM, double &OTM, double &K, double &S0, double &r, d
     //Plots
     auto greeks  = split(GreekTypes);
     auto options = split(optionTypes);
+    // print options
+    if (options.size()==1){std::string opt = options[0];}
 
     size_t gCount = greeks.size();
     size_t oCount = options.size();
@@ -384,7 +396,12 @@ void PlotMoneyness(double &ITM, double &OTM, double &K, double &S0, double &r, d
         ax->hold(on);
 
         for (size_t o = 0; o < oCount; o++) {
-            bool isCall = (options[o] == "Call" || options[o] == "call");
+            std::string call = "Call";
+            std::string opt;
+            if (options.size()==1){opt = options[0];}
+            else {opt = options[o];}
+            //opt = "Call"; // temporary force Call option for testing
+            bool isCall = (find(call, options[o])); // true if Call option
             std::array<float, 3> base = isCall ? std::array<float, 3>{0.f, 0.f, 1.f}  // blue
                                                : std::array<float, 3>{1.f, 0.f, 0.f}; // red
 
@@ -406,8 +423,8 @@ void PlotMoneyness(double &ITM, double &OTM, double &K, double &S0, double &r, d
             // Extract Greek values
             std::vector<double> GreekITM(Y.size()), GreekOTM(Y.size()), GreekATM(Y.size());
             for (size_t j = 0; j < Y.size(); ++j) {
-                GreekITM[j] = GreekValues[g][o][X.size() - idxITM][j];
-                GreekOTM[j] = GreekValues[g][o][X.size() - idxOTM][j];
+                GreekITM[j] = GreekValues[g][o][idxITM][j];
+                GreekOTM[j] = GreekValues[g][o][idxOTM][j];
                 GreekATM[j] = GreekValues[g][o][idxATM][j];
             }
 
@@ -415,7 +432,7 @@ void PlotMoneyness(double &ITM, double &OTM, double &K, double &S0, double &r, d
             std::vector<std::string> legends;
             legends.reserve(3);
             auto l1 = ax->plot(Y, GreekITM);
-            std::string name1 = "ITM (" + std::to_string((int)ITM) + "%)-" + std::string(!isCall ? " Call" : " Put");
+            std::string name1 = "ITM (" + std::to_string((int)ITM) + "%)-" + std::string(isCall ? " Call" : " Put");
             l1->line_width(2); l1->color(base); l1->display_name(name1  );
             legends.push_back(name1);
             //l1->legend_string("ITM (" + std::to_string((int)ITM) + "%)-" + std::string(isCall ? " Call" : " Put"));
