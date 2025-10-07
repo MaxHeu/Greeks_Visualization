@@ -99,7 +99,9 @@ Plots=3D
 
 C++17 or newer
 
-Matplot++ (requires GNU plot)
+Matplot++ 
+
+GNUplot ≥ (5.2.6+)
 
 ImGui
 
